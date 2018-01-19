@@ -24,3 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user/list', 'UserController@userList')->name('userList');
 Route::get('/user/addUser', 'UserController@addUser')->name('addUser');
 Route::post('doAddUser', 'UserController@doAddUser')->name('doAddUser');
+
+Route::get('/brand/brandList', 'BrandController@brandList')->name('brandList');

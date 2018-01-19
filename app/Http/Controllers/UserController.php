@@ -17,11 +17,11 @@ class UserController extends Controller
         }else{
             $userlist = User::paginate(10);
         }
-        return view('userList',['breadcrumb'=>'管理员列表','userlist'=>$userlist,'keyword'=>$keyword]);
+        return view('user/userList',['breadcrumb'=>'管理员列表','userlist'=>$userlist,'keyword'=>$keyword]);
     }
 
     public function addUser(){
-        return view('userAdd',['breadcrumb'=>'添加管理员']);
+        return view('user/userAdd',['breadcrumb'=>'添加管理员']);
     }
 
     public function doAddUser(Request $request){
@@ -39,7 +39,7 @@ class UserController extends Controller
         $data['password'] = Hash::make($request->input('email'));
         $data['created_at'] = date('Y-m-d H:i:s');
         if(User::insert($data)){
-            echo 1231;exit;
+            return redirect('/user/list')->with('Update Success! 成功！');
         }
         return back()->withErrors('添加失败');
     }
