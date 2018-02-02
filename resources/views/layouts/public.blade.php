@@ -129,7 +129,7 @@
             <div class="nav-collapse sidebar-nav">
                 <ul class="nav nav-tabs nav-stacked main-menu">
                     <li><a href="{{ route('home') }}"><i class="icon-bar-chart"></i><span class="hidden-tablet"> 首页</span></a></li>
-                    <li><a href="messages.html"><i class="icon-align-justify"></i><span class="hidden-tablet"> 分类管理</span></a></li>
+                    <li><a href="{{ route('brandList') }}"><i class="icon-align-justify"></i><span class="hidden-tablet"> 分类管理</span></a></li>
                     <li><a href="tasks.html"><i class="icon-tasks"></i><span class="hidden-tablet"> 商品管理</span></a></li>
                     <li><a href="{{ route('userList') }}"><i class="icon-eye-open"></i><span class="hidden-tablet"> 管理员管理</span></a></li>
                     <li>
